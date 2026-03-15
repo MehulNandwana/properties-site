@@ -1,0 +1,313 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viratra Properties | About Us</title>
+    <meta
+      name="description"
+      content="About Viratra Properties - trusted real estate in Kota."
+    />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a365d",
+              secondary: "#c9a227",
+              light: "#f7fafc",
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .sticky-nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #c9a227;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="sticky-nav py-4 px-6 lg:px-12">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold text-primary"
+            >Viratra<span class="text-secondary">Properties</span></span
+          >
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="test.html"
+            class="text-gray-700 hover:text-secondary font-medium transition"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 hover:text-secondary font-medium transition"
+            >Services</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 hover:text-secondary font-medium transition"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-700 hover:text-secondary font-medium transition"
+            >Contact</a
+          >
+        </div>
+        <a
+          href="tel:+918290702412"
+          class="btn-primary text-white px-4 py-2 rounded-lg font-medium hidden md:block"
+          >Call Now</a
+        >
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white py-4 px-6 shadow-lg mt-2 rounded-lg"
+      >
+        <a
+          href="test.html"
+          class="block py-2 text-gray-700 hover:text-secondary"
+          >Home</a
+        >
+        <a
+          href="services.html"
+          class="block py-2 text-gray-700 hover:text-secondary"
+          >Services</a
+        >
+        <a
+          href="about.html"
+          class="block py-2 text-gray-700 hover:text-secondary"
+          >About Us</a
+        >
+        <a
+          href="contact.html"
+          class="block py-2 text-gray-700 hover:text-secondary"
+          >Contact</a
+        >
+        <a href="tel:+918290702412" class="block py-2 text-primary font-medium"
+          >Call Now</a
+        >
+      </div>
+    </nav>
+
+    <section class="py-16 px-4 lg:px-12">
+      <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="About Viratra Properties"
+                class="rounded-lg shadow-xl w-full"
+              />
+              <div
+                class="absolute -bottom-6 -right-6 bg-secondary text-primary p-6 rounded-lg shadow-lg hidden md:block"
+              >
+                <span class="text-3xl font-bold">10+</span>
+                <span class="block text-sm">Years Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <h2
+              class="text-3xl font-bold text-primary section-title inline-block pb-2 mb-6"
+            >
+              About Viratra Properties
+            </h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Established with a vision to revolutionize the real estate
+              experience in Kota, Viratra Properties has been your trusted
+              partner for all property-related needs. We specialize in providing
+              seamless solutions for buying, selling, and investing in
+              residential and commercial properties.
+            </p>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Our commitment to trust, transparency, and customer satisfaction
+              sets us apart. With deep local knowledge and a client-centric
+              approach, we ensure you find the right property that matches your
+              aspirations and budget.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-secondary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Trusted by 500+ Clients</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-secondary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Transparent Deals</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-secondary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Best Market Rates</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-secondary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">24/7 Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-primary text-white py-12 px-4 lg:px-12">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <span class="text-2xl font-bold"
+              >Viratra<span class="text-secondary">Properties</span></span
+            >
+            <p class="text-gray-400 mt-2">
+              Your Trusted Property Partner in Kota.
+            </p>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="test.html"
+              class="text-gray-400 hover:text-secondary transition"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-400 hover:text-secondary transition"
+              >Services</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-400 hover:text-secondary transition"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-400 hover:text-secondary transition"
+              >Contact</a
+            >
+          </div>
+        </div>
+        <hr class="border-gray-700 my-8" />
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400"
+        >
+          <p>&copy; 2023 Viratra Properties. All Rights Reserved.</p>
+          <p class="mt-2 md:mt-0">Mahaveer Nagar Extension, Kota, Rajasthan</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

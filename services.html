@@ -1,0 +1,352 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viratra Properties | Services</title>
+    <meta
+      name="description"
+      content="Services offered by Viratra Properties in Kota, Rajasthan."
+    />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a365d",
+              secondary: "#c9a227",
+              light: "#f7fafc",
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .sticky-nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #c9a227;
+      }
+    </style>
+  </head>
+  <body class="bg-light text-gray-800">
+    <!-- Navigation -->
+    <nav class="sticky-nav py-4 px-6 lg:px-12">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold text-primary"
+            >Viratra<span class="text-secondary">Properties</span></span
+          >
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="test.html"
+            class="text-gray-700 hover:text-secondary font-medium transition"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 hover:text-secondary font-medium transition"
+            >Services</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 hover:text-secondary font-medium transition"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-700 hover:text-secondary font-medium transition"
+            >Contact</a
+          >
+        </div>
+        <a
+          href="tel:+918290702412"
+          class="btn-primary text-white px-4 py-2 rounded-lg font-medium hidden md:block"
+          >Call Now</a
+        >
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white py-4 px-6 shadow-lg mt-2 rounded-lg"
+      >
+        <a
+          href="test.html"
+          class="block py-2 text-gray-700 hover:text-secondary"
+          >Home</a
+        >
+        <a
+          href="services.html"
+          class="block py-2 text-gray-700 hover:text-secondary"
+          >Services</a
+        >
+        <a
+          href="about.html"
+          class="block py-2 text-gray-700 hover:text-secondary"
+          >About Us</a
+        >
+        <a
+          href="contact.html"
+          class="block py-2 text-gray-700 hover:text-secondary"
+          >Contact</a
+        >
+        <a href="tel:+918290702412" class="block py-2 text-primary font-medium"
+          >Call Now</a
+        >
+      </div>
+    </nav>
+
+    <section class="py-16 px-4 lg:px-12 bg-white">
+      <div class="container mx-auto">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold text-primary section-title inline-block pb-2"
+          >
+            Our Services
+          </h2>
+          <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+            We offer a comprehensive range of real estate services to meet all
+            your property needs in Kota.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="service-card bg-light p-8 rounded-xl text-center border border-gray-100"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Buying Property
+            </h3>
+            <p class="text-gray-600">
+              Find your dream home or ideal investment property with our expert
+              guidance.
+            </p>
+          </div>
+          <div
+            class="service-card bg-light p-8 rounded-xl text-center border border-gray-100"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Selling Property
+            </h3>
+            <p class="text-gray-600">
+              Get the best market value for your property with our proven
+              marketing strategies.
+            </p>
+          </div>
+          <div
+            class="service-card bg-light p-8 rounded-xl text-center border border-gray-100"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Residential Deals
+            </h3>
+            <p class="text-gray-600">
+              Apartments, villas, and plots in prime residential areas of Kota.
+            </p>
+          </div>
+          <div
+            class="service-card bg-light p-8 rounded-xl text-center border border-gray-100"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Commercial Deals
+            </h3>
+            <p class="text-gray-600">
+              Office spaces, shops, and commercial plots for business growth.
+            </p>
+          </div>
+          <div
+            class="service-card bg-light p-8 rounded-xl text-center border border-gray-100"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Investment Guidance
+            </h3>
+            <p class="text-gray-600">
+              Expert advice on property investments for high returns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-primary text-white py-12 px-4 lg:px-12">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <span class="text-2xl font-bold"
+              >Viratra<span class="text-secondary">Properties</span></span
+            >
+            <p class="text-gray-400 mt-2">
+              Your Trusted Property Partner in Kota.
+            </p>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="test.html"
+              class="text-gray-400 hover:text-secondary transition"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-400 hover:text-secondary transition"
+              >Services</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-400 hover:text-secondary transition"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-400 hover:text-secondary transition"
+              >Contact</a
+            >
+          </div>
+        </div>
+        <hr class="border-gray-700 my-8" />
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400"
+        >
+          <p>&copy; 2023 Viratra Properties. All Rights Reserved.</p>
+          <p class="mt-2 md:mt-0">Mahaveer Nagar Extension, Kota, Rajasthan</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
