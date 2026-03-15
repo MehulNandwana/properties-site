@@ -1,0 +1,494 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viratra Properties | Your Trusted Property Partner in Kota</title>
+    <meta name="description" content="Viratra Properties - Your trusted partner for buying, selling, and investing in properties in Kota, Rajasthan. Contact us today for the best deals.">
+    <meta name="keywords" content="Real Estate, Property in Kota, Buy Property Kota, Sell Property Kota, Commercial Property Kota, Residential Property Kota, Viratra Properties">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d', // Dark Blue
+                        secondary: '#c9a227', // Gold
+                        accent: '#2d3748', // Dark Gray
+                        light: '#f7fafc' // Light Gray
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #c9a227;
+        }
+        
+        .btn-primary {
+            background-color: #1a365d;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2d4a7c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: #c9a227;
+            color: #1a365d;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #b08d1f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        .call-sticky {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background-color: #1a365d;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            animation: pulse 2s infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .call-sticky {
+                display: flex;
+            }
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(26, 54, 93, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(26, 54, 93, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(26, 54, 93, 0); }
+        }
+        
+        .form-input:focus {
+            border-color: #c9a227;
+            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.2);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Map container */
+        .map-container {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-light text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="sticky-nav py-4 px-6 lg:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold text-primary">Viratra<span class="text-secondary">Properties</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-secondary font-medium transition">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-secondary font-medium transition">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-secondary font-medium transition">About Us</a>
+                <a href="#contact" class="text-gray-700 hover:text-secondary font-medium transition">Contact</a>
+            </div>
+            <a href="tel:+918290702412" class="btn-primary text-white px-4 py-2 rounded-lg font-medium hidden md:block">Call Now</a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg mt-2 rounded-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-secondary">Home</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-secondary">Services</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-secondary">About Us</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-secondary">Contact</a>
+            <a href="tel:+918290702412" class="block py-2 text-primary font-medium">Call Now</a>
+        </div>
+    </nav>
+
+    <!-- Home Section / Hero -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Your Trusted Property Partner – Viratra Properties
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-200">
+                Your premier destination for buying, selling, and investing in real estate across Kota, Rajasthan. We promise transparency, trust, and the best deals tailored to your needs.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+918290702412" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    Call Now – 8290702412
+                </a>
+                <a href="#contact" class="btn-secondary px-8 py-3 rounded-lg font-semibold text-lg flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    Send Enquiry
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 lg:px-12 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary section-title inline-block pb-2">Our Services</h2>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">We offer a comprehensive range of real estate services to meet all your property needs in Kota.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-light p-8 rounded-xl text-center border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Buying Property</h3>
+                    <p class="text-gray-600">Find your dream home or ideal investment property with our expert guidance.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-light p-8 rounded-xl text-center border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Selling Property</h3>
+                    <p class="text-gray-600">Get the best market value for your property with our proven marketing strategies.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-light p-8 rounded-xl text-center border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Residential Deals</h3>
+                    <p class="text-gray-600">Apartments, villas, and plots in prime residential areas of Kota.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-light p-8 rounded-xl text-center border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Commercial Deals</h3>
+                    <p class="text-gray-600">Office spaces, shops, and commercial plots for business growth.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-light p-8 rounded-xl text-center border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Investment Guidance</h3>
+                    <p class="text-gray-600">Expert advice on property investments for high returns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 lg:px-12 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="About Viratra Properties" class="rounded-lg shadow-xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-secondary text-primary p-6 rounded-lg shadow-lg hidden md:block">
+                            <span class="text-3xl font-bold">10+</span>
+                            <span class="block text-sm">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-primary section-title inline-block pb-2 mb-6">About Viratra Properties</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Established with a vision to revolutionize the real estate experience in Kota, Viratra Properties has been your trusted partner for all property-related needs. We specialize in providing seamless solutions for buying, selling, and investing in residential and commercial properties.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our commitment to trust, transparency, and customer satisfaction sets us apart. With deep local knowledge and a client-centric approach, we ensure you find the right property that matches your aspirations and budget.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="text-gray-700">Trusted by 500+ Clients</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="text-gray-700">Transparent Deals</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="text-gray-700">Best Market Rates</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="text-gray-700">24/7 Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 lg:px-12 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary section-title inline-block pb-2">Get In Touch</h2>
+                <p class="mt-6 text-gray-600">Have questions or ready to find your perfect property? Contact us today!</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Info & Map -->
+                <div class="lg:w-1/2">
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Phone Number</h4>
+                                <a href="tel:+918290702412" class="text-primary hover:text-secondary transition">+91 8290702412</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Address</h4>
+                                <p class="text-gray-600">Mahaveer Nagar Extension, Kota, Rajasthan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Map Embed -->
+                    <div class="map-container h-64 md:h-80 w-full">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58177.60845276299!2d75.7751!3d25.1528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f3d9f6e378f9f%3A0x1234567890abcdef!2sMahaveer%20Nagar%20Extension%2C%20Kota%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:w-1/2">
+                    <form id="enquiry-form" class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none transition" placeholder="John Doe">
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none transition" placeholder="+91 8290702412">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none transition resize-none" placeholder="I am interested in..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full text-white py-3 rounded-lg font-semibold text-lg flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            Submit Enquiry
+                        </button>
+                    </form>
+                    <p id="form-status" class="mt-4 text-center text-sm hidden"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12 px-4 lg:px-12">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold">Viratra<span class="text-secondary">Properties</span></span>
+                    <p class="text-gray-400 mt-2">Your Trusted Property Partner in Kota.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-secondary transition">Home</a>
+                    <a href="#services" class="text-gray-400 hover:text-secondary transition">Services</a>
+                    <a href="#about" class="text-gray-400 hover:text-secondary transition">About</a>
+                    <a href="#contact" class="text-gray-400 hover:text-secondary transition">Contact</a>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; 2023 Viratra Properties. All Rights Reserved.</p>
+                <p class="mt-2 md:mt-0">Mahaveer Nagar Extension, Kota, Rajasthan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918290702412?text=Hi,%20I'm%20interested%20in%20your%20property%20services." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <!-- Sticky Call Button (Mobile) -->
+    <a href="tel:+918290702412" class="call-sticky" title="Call Now">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission (Simulation)
+        const enquiryForm = document.getElementById('enquiry-form');
+        const formStatus = document.getElementById('form-status');
+
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const btn = enquiryForm.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                formStatus.textContent = 'Thank you! Your enquiry has been sent. We will contact you soon.';
+                formStatus.classList.remove('hidden', 'text-red-500');
+                formStatus.classList.add('text-green-600');
+                enquiryForm.reset();
+                
+                // Hide status message after 5 seconds
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
